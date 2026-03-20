@@ -1,5 +1,4 @@
 import { useState } from "react";
-import profileImg from "../../assets/images/athul1.jpg";
 import profileImg2 from "../../assets/images/athul2.jpg";
 import "./About.css";
 import Skills from "./Skills";
