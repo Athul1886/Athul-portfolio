@@ -1,0 +1,259 @@
+/* SECTION */
+
+:root {
+    --swiper-theme-color: #a855f7;
+}
+
+.project {
+    margin: 80px;
+    max-width: 1500px;
+    padding: 40px;
+}
+
+/* TITLE */
+.title {
+    margin-bottom: 60px;
+    height: 100px;
+    font-size: 38px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #a855f7;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* GRID */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: stretch;
+    /* important */
+}
+
+/* CARD */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    border-radius: 15px;
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+/* HOVER EFFECT */
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: #a855f7;
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+
+/* IMAGE */
+.project-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* TEXT */
+.project-card h3 {
+    font-size: 18px;
+    margin: 15px;
+    color: #ffffff;
+}
+
+.project-card p {
+    min-height: 100px;
+    /* adjust based on longest content */
+    margin: 0 15px 15px;
+    font-size: 13px;
+    color: #a1a1aa;
+    line-height: 1.5;
+}
+
+/* SKILLS */
+.skills {
+    margin-top: auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.skills span {
+    font-size: 11px;
+    padding: 5px 10px;
+    background: rgba(168, 85, 247, 0.1);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 20px;
+}
+
+/* BUTTONS */
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 18px;
+}
+
+.btn {
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 1px solid #2a2a2a;
+    text-decoration: none;
+    font-size: 12px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+/* PRIMARY BUTTON */
+.btn.primary {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    border: none;
+}
+
+/* HOVER */
+.btn:hover {
+    opacity: 0.85;
+}
+
+.category-title {
+    margin-top: 100px;
+    /* 🔥 moves it down */
+    margin-bottom: 30px;
+
+    text-align: left;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.project-swiper {
+    width: 100%;
+    height: 170px;
+}
+
+.project-swiper img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+/* Pagination dots */
+.project-swiper .swiper-pagination-bullet {
+    background: #aaa !important;
+    opacity: 0.6;
+}
+
+.project-swiper .swiper-pagination-bullet-active {
+    background: #a855f7 !important;
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.8);
+    opacity: 1;
+}
+
+/* ===== MOBILE FIXES FOR PROJECT ===== */
+@media (max-width: 768px) {
+
+    /* SECTION SPACING FIX */
+    .project {
+        margin: 60px 20px;
+        padding: 20px;
+    }
+
+    /* TITLE CLEANUP */
+    .title {
+        font-size: 28px;
+        margin-bottom: 40px;
+        height: auto;
+        /* remove useless fixed height */
+    }
+
+    /* GRID → 2 COLUMNS */
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* CARD IMAGE */
+    .project-card img {
+        height: 140px;
+    }
+
+    /* TEXT SIZE FIX */
+    .project-card h3 {
+        font-size: 16px;
+    }
+
+    .project-card p {
+        font-size: 12px;
+    }
+
+    /* BUTTONS */
+    .btn {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    /* CATEGORY TITLE */
+    .category-title {
+        font-size: 22px;
+        margin-top: 60px;
+        text-align: center;
+    }
+}
+
+
+/* ===== SMALL MOBILE FIXES ===== */
+@media (max-width: 425px) {
+
+    /* GRID → 1 COLUMN (IMPORTANT) */
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* CARD IMAGE SMALLER */
+    .project-card img {
+        height: 130px;
+    }
+
+    /* CENTER EVERYTHING */
+    .project-card h3,
+    .project-card p {
+        text-align: center;
+    }
+
+    /* BUTTON STACK */
+    .btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 160px;
+        text-align: center;
+    }
+
+    /* SKILLS CENTERED CLEAN */
+    .skills {
+        justify-content: center;
+    }
+}

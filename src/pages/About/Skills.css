@@ -1,0 +1,93 @@
+.skills {
+    margin-top: 120px;
+    /* increase this */
+    padding-top: 40px;
+    /* add breathing space */
+    max-width: 1200px;
+    margin-inline: auto;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.skills h3 {
+    color: var(--primary-red);
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* SLIDER */
+.skills-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* TRACK */
+.skills-track {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: max-content;
+    animation: scrollSkills 25s linear infinite;
+}
+
+/* ITEM */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 90px;
+}
+
+.skill-item svg {
+    font-size: 55px;
+    color: var(--text-white);
+    transition: 0.3s;
+}
+
+.skill-item span {
+    font-size: 14px;
+    color: var(--text-white);
+}
+
+/* HOVER */
+.skill-item:hover svg {
+    transform: scale(1.2);
+    color: var(--primary-red);
+}
+
+/* SMOOTH INFINITE SCROLL */
+@keyframes scrollSkills {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* PAUSE ON HOVER */
+.skills-slider:hover .skills-track {
+    animation-play-state: paused;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .skills-track {
+        animation: none;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .skills-track::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .skills-track::-webkit-scrollbar-thumb {
+        background: #444;
+        border-radius: 10px;
+    }
+}
