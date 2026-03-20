@@ -1,72 +1,33 @@
-![Logo](Photo.png)
+# Athul Krishna Portfolio 🚀
 
-# Amine Portfolio Showcase 💻
-
-Welcome to Amine's Portfolio Showcase!
-A modern and elegant personal portfolio website built to present my projects, skills, and professional journey using React.js.
----
-
-## Live Demo 🚀
-
-You can view the live website here: [Live Demo](https://saboo24.github.io/Portfolio11/)
+This is my personal portfolio website built using React and Vite to showcase my projects, skills, and experience in software testing and web development.
 
 ---
 
-## 🌟 Website Sections
+## 💼 Projects
 
-- **Home**: Developer introduction with avatar and short description  
-- **About**: Experience, tech stack, personal insights, and skill cards  
-- **Projects**: Showcase of projects with images, descriptions, and skills  
-- **Services**: Highlighting services offered with interactive cards  
-- **Contact**: Contact form and social links with interactive hover effects  
-
----
-
-## ⚡ Features
-
-- Clean & modern UI design
-- Smooth animations and transitions
-- Fully responsive (Desktop / Tablet / Mobile)
-- Interactive sections & hover effects
-- Clean and organized code structure
-- Fast performance & lightweight 
+### Thalirila – E-commerce Application Testing
+- Tested a single-store e-commerce web application with Admin and Vendor portals  
+- Performed manual testing for product management, user flows, and order processing  
+- Logged defects using Zoho with proper severity and documentation  
+- Conducted API testing and validated frontend-backend data flow  
 
 ---
 
-## 🛠 Technologies Used
-
-- **React.js** – Building reusable UI components  
-- **Vite** – Fast development environment and build tool  
-- **JavaScript (ES6+)** – Application logic and functionality  
-- **CSS3** – Styling and responsive layout  
-- **Font Awesome / Boxicons** – Icons – Scroll animations  
+## 🛠 Tech Stack
+- React.js  
+- JavaScript  
+- CSS  
+- Vite  
 
 ---
 
-## License
-
-This project is licensed under the terms described in the [LICENSE](LICENSE) file.
+## ✨ Features
+- Responsive design  
+- Clean UI with smooth animations  
+- Multi-section portfolio (About, Skills, Projects, Contact)  
 
 ---
-
-## 🚀 How to Use / Customize
-
-1. **Clone the repository:**
-
- ---
 
 ## 📬 Contact
-
-- Email: aminehamzaoui1925@gmail.com   
-- Location: Boumerdès, Algeria  
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-amine-hamzaoui-a2453a35b/)  
-- GitHub: [GitHub](https://github.com/Saboo24)  
-- Instagram: [Instagram](https://www.instagram.com/a__m.i.n__e/?utm_source=ig_web_button_share_sheet)
-
----
-
-Made with ❤️ by **Amine Hamzaoui**
-
-
-```bash
-git clone https://github.com/Saboo24/portofolio11.git
+- LinkedIn: (https://www.linkedin.com/in/athul-krishna-u-2618aa333/)
