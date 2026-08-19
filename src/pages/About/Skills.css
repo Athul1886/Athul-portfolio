@@ -1,19 +1,21 @@
+/* CYBER SENTINEL - TOOL MARQUEE SLIDER */
 .skills {
-    margin-top: 120px;
-    /* increase this */
-    padding-top: 40px;
-    /* add breathing space */
+    margin-top: 50px;
+    padding-top: 30px;
     max-width: 1200px;
     margin-inline: auto;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
+    border-top: 1px dashed rgba(176, 38, 255, 0.25);
 }
 
 .skills h3 {
-    color: var(--primary-red);
-    font-size: 28px;
-    margin-bottom: 30px;
+    color: var(--accent-primary, #B026FF);
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
 }
 
 /* SLIDER */
@@ -21,13 +23,14 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    padding: 10px 0;
 }
 
 /* TRACK */
 .skills-track {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
     width: max-content;
     animation: scrollSkills 25s linear infinite;
 }
@@ -37,25 +40,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    min-width: 90px;
+    gap: 10px;
+    padding: 14px 18px;
+    min-width: 100px;
+    background: rgba(14, 14, 19, 0.8);
+    border: 1px solid rgba(176, 38, 255, 0.25);
+    transition: all 0.3s ease;
 }
 
 .skill-item svg {
-    font-size: 55px;
-    color: var(--text-white);
-    transition: 0.3s;
+    font-size: 38px;
+    color: var(--accent-tertiary, #C77DFF);
+    transition: all 0.3s ease;
 }
 
 .skill-item span {
-    font-size: 14px;
-    color: var(--text-white);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: #ffffff;
 }
 
 /* HOVER */
+.skill-item:hover {
+    border-color: var(--accent-primary, #B026FF);
+    background: rgba(176, 38, 255, 0.12);
+    box-shadow: 0 0 15px rgba(176, 38, 255, 0.4);
+    transform: translateY(-4px);
+}
+
 .skill-item:hover svg {
-    transform: scale(1.2);
-    color: var(--primary-red);
+    transform: scale(1.15);
+    color: var(--accent-primary, #B026FF);
+    filter: drop-shadow(0 0 8px #B026FF);
 }
 
 /* SMOOTH INFINITE SCROLL */
@@ -63,7 +79,6 @@
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(-50%);
     }
@@ -74,20 +89,19 @@
     animation-play-state: paused;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width: 768px) {
     .skills-track {
-        animation: none;
-        overflow-x: auto;
-        padding-bottom: 10px;
+        gap: 20px;
     }
-
-    .skills-track::-webkit-scrollbar {
-        height: 5px;
+    .skill-item {
+        min-width: 85px;
+        padding: 10px 14px;
     }
-
-    .skills-track::-webkit-scrollbar-thumb {
-        background: #444;
-        border-radius: 10px;
+    .skill-item svg {
+        font-size: 30px;
+    }
+    .skill-item span {
+        font-size: 11px;
     }
 }

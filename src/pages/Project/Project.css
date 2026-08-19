@@ -1,259 +1,279 @@
-/* SECTION */
-
+/* CYBER SENTINEL - BOSS BATTLES (PROJECTS) */
 :root {
-    --swiper-theme-color: #a855f7;
+    --swiper-theme-color: #B026FF;
 }
 
-.project {
-    margin: 80px;
-    max-width: 1500px;
-    padding: 40px;
-}
-
-/* TITLE */
-.title {
-    margin-bottom: 60px;
-    height: 100px;
-    font-size: 38px;
-    color: #ffffff;
-    text-align: center;
+.cyber-project {
+    margin: 60px auto 100px;
+    max-width: 1300px;
+    padding: 40px 24px;
     position: relative;
+    z-index: 2;
 }
 
-.title::after {
-    content: "";
-    width: 80px;
-    height: 3px;
-    background: #a855f7;
-    display: block;
-    margin: 12px auto 0;
-    border-radius: 2px;
+/* CATEGORY HEADER */
+.project-category {
+    margin-bottom: 60px;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(176, 38, 255, 0.3);
+    padding-bottom: 12px;
+    margin-bottom: 32px;
+}
+
+.category-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-primary, #B026FF);
+}
+
+.category-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.academic-sector {
+    margin-top: 80px;
 }
 
 /* GRID */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 32px;
     align-items: stretch;
-    /* important */
 }
 
-/* CARD */
-.project-card {
+/* BOSS BATTLE CARD */
+.boss-battle-card {
+    background: rgba(14, 14, 19, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(176, 38, 255, 0.25);
+    border-radius: 0px; /* Sharp 90deg corners */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
-    background: #0a0a0a;
-    border: 1px solid #1f1f1f;
-    border-radius: 15px;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.boss-battle-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-primary, #B026FF);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(176, 38, 255, 0.35);
+}
+
+/* BANNER & MEDIA */
+.boss-banner {
+    position: relative;
+    height: 200px;
     overflow: hidden;
-
-    transition: 0.4s;
+    background: #000000;
+    border-bottom: 1px solid rgba(176, 38, 255, 0.25);
 }
 
-/* HOVER EFFECT */
-.project-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    border-color: #a855f7;
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
-}
-
-/* IMAGE */
-.project-card img {
+.boss-img {
     width: 100%;
-    height: 170px;
+    height: 100%;
     object-fit: cover;
-    transition: 0.4s;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
-.project-card:hover img {
-    transform: scale(1.05);
+.boss-battle-card:hover .boss-img {
+    transform: scale(1.04);
 }
 
-/* TEXT */
-.project-card h3 {
-    font-size: 18px;
-    margin: 15px;
-    color: #ffffff;
+/* DUOTONE OVERLAY */
+.duotone-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(176, 38, 255, 0.3), rgba(138, 43, 226, 0.2));
+    mix-blend-mode: color;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 2;
 }
 
-.project-card p {
-    min-height: 100px;
-    /* adjust based on longest content */
-    margin: 0 15px 15px;
-    font-size: 13px;
-    color: #a1a1aa;
-    line-height: 1.5;
+.boss-battle-card:hover .duotone-overlay {
+    opacity: 0.15;
 }
 
-/* SKILLS */
-.skills {
-    margin-top: auto;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 15px;
+/* DIFFICULTY BADGE */
+.difficulty-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10;
+    letter-spacing: 0.05em;
 }
 
-.skills span {
-    font-size: 11px;
-    padding: 5px 10px;
-    background: rgba(168, 85, 247, 0.1);
-    color: #c084fc;
-    border: 1px solid rgba(168, 85, 247, 0.3);
-    border-radius: 20px;
+.diff-easy {
+    color: var(--accent-teal, #00FFC2);
+    background: rgba(0, 255, 194, 0.15);
+    border: 1px solid var(--accent-teal, #00FFC2);
 }
 
-/* BUTTONS */
-.btns {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding-bottom: 18px;
+.diff-medium {
+    color: var(--accent-tertiary, #C77DFF);
+    background: rgba(138, 43, 226, 0.2);
+    border: 1px solid var(--accent-secondary, #8A2BE2);
 }
 
-.btn {
-    padding: 7px 14px;
-    border-radius: 20px;
-    border: 1px solid #2a2a2a;
-    text-decoration: none;
-    font-size: 12px;
-    color: #ffffff;
-    transition: 0.3s;
+.diff-hard {
+    color: var(--accent-rose, #FF0055);
+    background: rgba(255, 0, 85, 0.18);
+    border: 1px solid var(--accent-rose, #FF0055);
 }
 
-/* PRIMARY BUTTON */
-.btn.primary {
-    background: linear-gradient(135deg, #a855f7, #7c3aed);
-    border: none;
-}
-
-/* HOVER */
-.btn:hover {
+/* VICTORY STAMP BADGE */
+.victory-stamp {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    transform: rotate(-12deg);
+    z-index: 10;
     opacity: 0.85;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent-teal, #00FFC2);
+    border: 2px solid var(--accent-teal, #00FFC2);
+    padding: 2px 8px;
+    background: rgba(10, 10, 15, 0.85);
+    box-shadow: 0 0 10px rgba(0, 255, 194, 0.4);
+    letter-spacing: 0.08em;
 }
 
-.category-title {
-    margin-top: 100px;
-    /* 🔥 moves it down */
-    margin-bottom: 30px;
+.boss-battle-card:hover .victory-stamp {
+    opacity: 1;
+    transform: rotate(-12deg) scale(1.1);
+    box-shadow: 0 0 16px rgba(0, 255, 194, 0.7);
+}
 
-    text-align: left;
-    font-size: 28px;
+/* CARD CONTENT */
+.boss-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 14px;
+}
+
+.boss-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 17px;
+    font-weight: 700;
     color: #ffffff;
+    text-shadow: 0 0 8px rgba(176, 38, 255, 0.4);
+    line-height: 1.35;
 }
 
+.boss-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
+    color: #a1a1aa;
+    line-height: 1.65;
+    flex: 1;
+}
+
+/* LOOT CONTAINER */
+.loot-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(176, 38, 255, 0.2);
+}
+
+.loot-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    background: rgba(176, 38, 255, 0.1);
+    border: 1px solid rgba(176, 38, 255, 0.3);
+    color: #ffffff;
+    padding: 3px 8px;
+    transition: all 0.2s ease;
+}
+
+.loot-tag:hover {
+    border-color: var(--accent-primary, #B026FF);
+    background: rgba(176, 38, 255, 0.2);
+}
+
+.loot-prefix {
+    color: var(--accent-tertiary, #C77DFF);
+    font-weight: bold;
+}
+
+/* SWIPER FIXES */
 .project-swiper {
     width: 100%;
-    height: 170px;
+    height: 100%;
 }
 
-.project-swiper img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-}
-
-/* Pagination dots */
 .project-swiper .swiper-pagination-bullet {
     background: #aaa !important;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .project-swiper .swiper-pagination-bullet-active {
-    background: #a855f7 !important;
-    box-shadow: 0 0 8px rgba(168, 85, 247, 0.8);
+    background: var(--accent-primary, #B026FF) !important;
+    box-shadow: 0 0 8px var(--accent-primary, #B026FF);
     opacity: 1;
 }
 
-/* ===== MOBILE FIXES FOR PROJECT ===== */
-@media (max-width: 768px) {
-
-    /* SECTION SPACING FIX */
-    .project {
-        margin: 60px 20px;
-        padding: 20px;
-    }
-
-    /* TITLE CLEANUP */
-    .title {
-        font-size: 28px;
-        margin-bottom: 40px;
-        height: auto;
-        /* remove useless fixed height */
-    }
-
-    /* GRID → 2 COLUMNS */
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
     .projects-container {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 24px;
     }
 
-    /* CARD IMAGE */
-    .project-card img {
-        height: 140px;
+    .boss-banner {
+        height: 180px;
     }
 
-    /* TEXT SIZE FIX */
-    .project-card h3 {
-        font-size: 16px;
-    }
-
-    .project-card p {
-        font-size: 12px;
-    }
-
-    /* BUTTONS */
-    .btn {
-        font-size: 11px;
-        padding: 6px 12px;
-    }
-
-    /* CATEGORY TITLE */
-    .category-title {
-        font-size: 22px;
-        margin-top: 60px;
-        text-align: center;
+    .boss-content {
+        padding: 18px;
     }
 }
 
-
-/* ===== SMALL MOBILE FIXES ===== */
-@media (max-width: 425px) {
-
-    /* GRID → 1 COLUMN (IMPORTANT) */
-    .projects-container {
-        grid-template-columns: 1fr;
+@media (max-width: 540px) {
+    .cyber-project {
+        padding: 30px 16px;
+        margin: 40px auto 70px;
     }
 
-    /* CARD IMAGE SMALLER */
-    .project-card img {
-        height: 130px;
+    .category-title {
+        font-size: 16px;
     }
 
-    /* CENTER EVERYTHING */
-    .project-card h3,
-    .project-card p {
-        text-align: center;
+    .boss-title {
+        font-size: 15px;
     }
 
-    /* BUTTON STACK */
-    .btns {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 160px;
-        text-align: center;
-    }
-
-    /* SKILLS CENTERED CLEAN */
-    .skills {
-        justify-content: center;
+    .boss-desc {
+        font-size: 13px;
     }
 }
