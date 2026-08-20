@@ -1,8 +1,8 @@
 /* CYBER SENTINEL - ABOUT SECTION */
 .cyber-about {
     position: relative;
-    margin: 60px auto 100px;
-    padding: 40px 24px;
+    margin: 15px auto 25px;
+    padding: 10px 6px;
     max-width: 1200px;
     z-index: 2;
 }
@@ -68,7 +68,7 @@
     flex-direction: column;
     overflow: hidden;
     cursor: crosshair;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .bug-game-terminal:hover {
@@ -110,7 +110,7 @@
     position: relative;
     flex: 1;
     overflow: hidden;
-    background-image: 
+    background-image:
         radial-gradient(rgba(176, 38, 255, 0.12) 1px, transparent 1px),
         linear-gradient(to right, rgba(176, 38, 255, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(176, 38, 255, 0.03) 1px, transparent 1px);
@@ -155,12 +155,29 @@
 }
 
 @keyframes glitchSquash {
-    0% { transform: translate(-50%, -50%) translate(0, 0); }
-    20% { transform: translate(-50%, -50%) translate(-2px, 2px); }
-    40% { transform: translate(-50%, -50%) translate(-2px, -2px); }
-    60% { transform: translate(-50%, -50%) translate(2px, 2px); }
-    80% { transform: translate(-50%, -50%) translate(2px, -2px); }
-    100% { transform: translate(-50%, -50%) translate(0, 0); }
+    0% {
+        transform: translate(-50%, -50%) translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-50%, -50%) translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-50%, -50%) translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(-50%, -50%) translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translate(0, 0);
+    }
 }
 
 /* CROSSHAIR HELPER */

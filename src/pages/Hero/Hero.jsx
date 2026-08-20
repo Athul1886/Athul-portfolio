@@ -112,7 +112,7 @@ export default function Hero() {
               <span className="btn-arrow">&rarr;</span>
             </a>
             <a href="#contact" className="chamfer-btn chamfer-btn-secondary">
-              <span>INITIALIZE_COMMS</span>
+              <span>CONTACT</span>
             </a>
           </div>
         </div>

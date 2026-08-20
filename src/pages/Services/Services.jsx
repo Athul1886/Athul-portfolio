@@ -59,7 +59,7 @@ function Skill() {
     >
       {/* SECTION HEADER */}
       <div className="cyber-section-header">
-        <span className="cyber-tag">// ARMORY_INVENTORY</span>
+        <span className="cyber-tag"> </span>
         <h2 className="cyber-title">
           Skills<span className="blink-cursor">_</span>
         </h2>

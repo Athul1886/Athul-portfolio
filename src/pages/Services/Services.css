@@ -1,8 +1,8 @@
 /* CYBER SENTINEL - LEVEL SELECT (SKILLS) */
 .cyber-skills {
-    margin: 60px auto 100px;
+    margin: 15px auto 25px;
     max-width: 1200px;
-    padding: 40px 24px;
+    padding: 10px 6px;
     position: relative;
     z-index: 2;
 }
